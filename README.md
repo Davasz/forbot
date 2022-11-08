@@ -1,7 +1,7 @@
 # README
 
 ChatBot automatizado integrado ao site [ForMove](https://github.com/jpmoncao/formove), por [João Pedro Monção](https://github.com/jpmoncao), [Davi Ribeiro](https://github.com/davasz), [Ariel Aio](https://github.com/ArielAio) e [Arthur Risso](https://github.com/arthurrpr)
-com HTML, CSS, JavaScript e a API.  
+com HTML, CSS, JavaScript e a API "Speech Recognition" nativa do próprio JS.  
 Possui 
 
 ##

@@ -45,7 +45,7 @@ Os alunos envolvidos nesse projeto, tanto na parte de pesquisa e desenvolvimento
 
 ## 🔗 Links
 [![email](https://img.shields.io/badge/email-056e3b?style=for-the-badge&logo=ko-fi&logoColor=white)](mailto:formove.contato@outlook.com)
-[![github](https://img.shields.io/badge/github-056e3b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Davaz/forbot)
+[![github](https://img.shields.io/badge/github-056e3b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Davasz/forbot)
 
 
 ## 📞Suporte

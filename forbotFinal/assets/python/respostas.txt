@@ -1,4 +1,0 @@
-0 | Olá, meu nome é ForBot!
-1 | Oi, eu sou um robo chamado ForBot!
-2 | Olá, eu estou ótimo
-3 | Estou muito bem

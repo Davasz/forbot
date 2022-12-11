@@ -1,0 +1,434 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+:root {
+    --color1: #0D2226;
+    --color2: #055941;
+    --color3: #0B8C68;
+    --color4: #2DA657;
+    --color5: #91CF59;
+    --bg-white: #E7F0DE;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--bg-white);
+}
+
+/* Header base */
+header {
+    position: fixed;
+    background-color: var(--color2);
+    height: 4.5rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+
+    padding: 0px 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+}
+
+header .logo h1 {
+    color: white;
+    font: normal bold 1.25em 'DM Sans';
+    margin-left: -1.2rem; 
+    margin-bottom: 0.4rem;
+}
+
+header .logo h4 {
+    color: white;
+    font: normal normal 0.5em 'DM Sans';
+    position: relative;
+    top: 1.25em;
+    left: -3rem;
+    width: 50px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav #icon-mobile {
+    visibility: visible;
+    display: block;
+}
+
+nav #icon-mobile img {
+    width: 2rem;
+    height: 2rem;
+}
+
+nav a {
+    visibility: hidden;
+    color: white;
+    font: normal normal 1.2em 'DM Sans';
+}
+
+.icon-mute {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-mute img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon-mute.active {
+    opacity: 0.3;
+}
+
+main {
+    padding-top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+main h1 {
+    font: normal bold 2em 'DM Sans';
+    margin-top: 4rem;
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: -0.065em;
+    color: var(--color2);
+    text-shadow: 0px 1px 4px rgba(13, 34, 38, 0.45);
+}
+
+main .section-message {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+main .section-message img {
+    max-height: 180px;
+    margin-left: -2rem;
+}
+
+main .section-message .show-messages {
+    display: flex;
+    flex-direction: column;
+
+    max-height: 60vh;
+}
+main .section-message .show-messages div {
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+}
+
+main .section-message .show-messages ul {
+    font-weight: 700;
+}
+
+main .section-message .show-messages li {
+    font-weight: 400;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+main .section-message .show-messages a {
+    font-weight: 500;
+    text-decoration: underline;
+    color: var(--color5);
+}
+
+main .bot-message {
+    background: var(--color3);
+    border-radius: 0px 8px 8px 12px;
+    padding: 8px 9px 8px 18px;
+
+    width: 13rem;
+    min-height: 3rem;
+
+    font: normal normal 0.75em 'DM Sans';
+    line-height: 1em;
+    color: white;
+    text-align: right;
+}
+
+main .user-message {
+    background: var(--color5);
+    border-radius: 8px 0px 12px 8px;
+    padding: 8px 18px 8px 9px;
+
+    width: 13rem;
+    min-height: 3rem;
+
+    font: normal normal 0.75em 'DM Sans';
+    line-height: 1em;
+    text-align: left;
+    color: white;
+}
+
+main .input-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+main .input-text #user-text {
+    background: #FFFFFF;
+    border: 1px solid #6F6F6F;
+    border-radius: 16px;
+    outline: none;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
+
+    font: normal normal 1em 'DM Sans';
+    letter-spacing: -0.065em;
+    color: rgba(0, 0, 0, 0.5);
+
+    resize: none;
+    padding: 2em 1em;
+    width: 100vw;
+
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+main #user-voice {
+    position: relative;
+    top: -0.75rem;
+    left: -55%;
+    align-self: end;
+
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    border-radius: 50%;
+    background: var(--color3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border: none;
+    outline: none;
+}
+
+main #user-voice img {
+    width: 1.5rem;
+}
+
+main #user-text-submit {
+    position: relative;
+    left: -15%;
+    top: -1rem;
+    align-self: end;
+
+    background: var(--color3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    width: 5rem;
+    height: 1.5rem;
+
+    font: normal bold .75em 'DM Sans';
+    line-height: 8px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+
+    border: none;
+    outline: none;
+}
+
+main #user-text-submit:hover {
+    background: #6bcaaf;   
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (min-width: 767px) {
+    main .section-message img {
+        max-height: 360px;
+        margin-left: -2rem;
+    }
+
+    main .section-message .show-messages div {
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+    }
+    
+    main .bot-message {
+        width: 15rem;
+        min-height: 5rem;
+    
+        font: normal normal 1em 'DM Sans';
+    }
+    
+    main .user-message {
+        width: 15rem;
+        min-height: 5rem;
+    
+        font: normal normal 1em 'DM Sans';
+    }
+    
+    main #user-voice {
+        top: -1rem;
+        left: -65%;
+        min-width: 3.5rem;
+        min-height: 3.5rem;
+    }
+    
+    main #user-voice img {
+        width: 1.75rem;
+    }
+    
+    main #user-text-submit {
+        left: -15%;
+        top: -1rem;
+        width: 7.5rem;
+        height: 2.5rem;
+    
+        font: normal bold 1em 'DM Sans';
+    }
+}
+
+@media screen and (min-width: 1020px) {
+
+    main .section-message {
+        gap: 15rem;
+        justify-content: center;
+    }
+
+    main .section-message img {
+        max-height: 420px;
+        margin-left: -2rem;
+    }
+
+    main .bot-message {
+        width: 25rem;
+        min-height: 5rem;
+    
+        font: normal normal 1em 'DM Sans';
+    }
+    
+    main .user-message {
+        width: 25rem;
+        min-height: 5rem;
+    
+        font: normal normal 1em 'DM Sans';
+    }
+
+    main .input-text #user-text {
+        font: normal normal 1.2em 'DM Sans';
+        width: 50vw;
+        position: relative;
+        left: 10%;
+        transform: translate(0%);
+    }
+    
+    main #user-voice {
+        top: -1rem;
+        left: -35%;
+        min-width: 3.5rem;
+        min-height: 3.5rem;
+    }
+    
+    main #user-voice img {
+        width: 1.75rem;
+    }
+    
+    main #user-text-submit {
+        left: -7.5%;
+        top: -1rem;
+        width: 7.5rem;
+        height: 3rem;
+    
+        font: normal bold 1em 'DM Sans';
+    }
+}
+
+@media screen and (min-width: 1620px) {
+    header {
+        height: 8rem;
+        padding: 0px 8rem;
+    }
+    
+    header .logo img {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .icon-mute img {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    header .logo h1 {
+        font: normal bold 4em 'DM Sans';
+    }
+    
+    header .logo h4 {
+        color: white;
+        font: normal normal 1em 'DM Sans';
+        position: relative;
+        top: 2em;
+        left: -6rem;
+        width: 150px;
+    }
+    
+    nav #icon-mobile img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    main .section-message {
+        gap: 15rem;
+        justify-content: center;
+    }
+
+    main .section-message img {
+        max-height: 420px;
+        margin-left: -2rem;
+    }
+
+    main .input-text #user-text {
+        font: normal normal 1.2em 'DM Sans';
+        width: 50vw;
+        position: relative;
+        left: 5%;
+        transform: translate(0%);
+    }
+    
+    main #user-voice {
+        top: -1rem;
+        left: -40%;
+        min-width: 3.5rem;
+        min-height: 3.5rem;
+    }
+    
+    main #user-voice img {
+        width: 1.75rem;
+    }
+    
+    main #user-text-submit {
+        left: -7.5%;
+        top: -1rem;
+        width: 7.5rem;
+        height: 3rem;
+    
+        font: normal bold 1em 'DM Sans';
+    }
+}
